@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import styles from "./email-signup.module.scss"
+import styles from "./email-signup.module.scss";
 
 const EmailSignup = () => {
   const data = useStaticQuery(graphql`
@@ -12,7 +12,7 @@ const EmailSignup = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className={styles.signupSection}>
@@ -47,7 +47,7 @@ const EmailSignup = () => {
         </fieldset>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default EmailSignup
+export default EmailSignup;

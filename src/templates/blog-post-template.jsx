@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import PrevNext from "../components/prev-next"
-import Button from "../components/button"
-import SocialShare from "../components/social-share"
+import Layout from "../components/layout";
+import PrevNext from "../components/prev-next";
+import Button from "../components/button";
+import SocialShare from "../components/social-share";
 
-import styles from "./blog-post-template.module.scss"
+import styles from "./blog-post-template.module.scss";
 
 export const queryPostBySlug = graphql`
   query($slug: String!) {
@@ -48,11 +48,11 @@ export const queryPostBySlug = graphql`
       }
     }
   }
-`
+`;
 
 const BlogPosts = ({ data, pageContext }) => {
-  const { post } = data
-  const { next, prev } = pageContext
+  const { post } = data;
+  const { next, prev } = pageContext;
 
   const nextDetails = !next
     ? null
@@ -60,7 +60,7 @@ const BlogPosts = ({ data, pageContext }) => {
         titleText: "Next Post",
         linkPath: "/blog/" + next.fields.slug,
         linkText: next.frontmatter.title,
-      }
+      };
 
   const prevDetails = !prev
     ? null
@@ -68,7 +68,7 @@ const BlogPosts = ({ data, pageContext }) => {
         titleText: "Previous Post",
         linkPath: "/blog/" + prev.fields.slug,
         linkText: prev.frontmatter.title,
-      }
+      };
 
   return (
     <Layout
@@ -85,7 +85,9 @@ const BlogPosts = ({ data, pageContext }) => {
           <h1 className={styles.title}>{post.frontmatter.title}</h1>
           {post.frontmatter.draft && (
             <div className={styles.draft}>
-              <span>! This post is a draft and will not be published in production !</span>
+              <span>
+                ! This post is a draft and will not be published in production !
+              </span>
             </div>
           )}
           <div>
@@ -130,7 +132,7 @@ const BlogPosts = ({ data, pageContext }) => {
         <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
       </article>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPosts
+export default BlogPosts;

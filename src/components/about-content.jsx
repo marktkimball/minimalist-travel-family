@@ -1,9 +1,9 @@
-import React from "react"
-import Img from "gatsby-image"
+import React from "react";
+import Img from "gatsby-image";
 
-import Button from "../components/button"
+import Button from "../components/button";
 
-import styles from "./about-content.module.scss"
+import styles from "./about-content.module.scss";
 
 const AboutContent = ({
   heading,
@@ -15,7 +15,7 @@ const AboutContent = ({
 }) => {
   let imageClassName = imageFirst
     ? styles.imageWrapperFirst
-    : styles.imageWrapper
+    : styles.imageWrapper;
 
   return (
     <section className={styles.sectionWrapper}>
@@ -31,7 +31,7 @@ const AboutContent = ({
 
       <Img fluid={image} alt={imageAlt} className={imageClassName} />
     </section>
-  )
-}
+  );
+};
 
-export default AboutContent
+export default AboutContent;

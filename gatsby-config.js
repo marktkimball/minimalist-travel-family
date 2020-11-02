@@ -6,12 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsby-starter-voyager.netlify.com",
-    author: "gregdferrell",
-    publisher: "gatsby-starter-voyager.netlify.com",
-    title: "Voyager",
+    siteUrl: "https://minimalisttravelfamily.com",
+    author: "marktkimball",
+    publisher: "minimalisttravelfamily.com",
+    title: "Minimalist Travel Family",
     description:
-      "Gatsby Starter Voyager is feature-rich starter blog. It's MIT licensed and ready to be used as-is or as a starting point from which to build something tailored to your needs. Use it, learn from it, build on it & enjoy.",
+      "Follow the adventures of our minimalist family as we travel the world and explore new places.",
     image: "/images/logo.jpg",
     bannerImage: "/images/banner.png",
     blogPostsPerPage: 5,
@@ -113,8 +113,8 @@ module.exports = {
                     site.siteMetadata.siteUrl +
                     "/blog/" +
                     edge.node.fields.slug,
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -170,11 +170,11 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         // req props
-        name: "Gatsby Starter Voyager",
-        short_name: "Voyager",
+        name: "Minimalist Travel Family",
+        short_name: "Minimalist Travel Family",
         start_url: "/",
         background_color: "#fff",
-        theme_color: "#9c7c38",
+        theme_color: "#6db1bf",
         display: "minimal-ui",
         // optional
         icon: "static/images/logo.jpg",
@@ -188,4 +188,4 @@ module.exports = {
       },
     },
   ],
-}
+};

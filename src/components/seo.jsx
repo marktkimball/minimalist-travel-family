@@ -1,6 +1,6 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
 const SEO = ({
   isArticle,
@@ -30,14 +30,14 @@ const SEO = ({
           url: pathName
             ? `${data.site.siteMetadata.siteUrl}${pathName}`
             : data.site.siteMetadata.siteUrl,
-        }
+        };
 
         // schema.org in JSONLD format
         // https://developers.google.com/search/docs/guides/intro-structured-data
 
         let schemaOrgWebPage,
           schemaOrgBlogPosting,
-          schemaOrgBreadcrumbList = null
+          schemaOrgBreadcrumbList = null;
 
         // Type WebPage: for all pages that aren't blog posts
         if (!isArticle) {
@@ -78,7 +78,7 @@ const SEO = ({
               "@type": "ImageObject",
               url: `${seo.image}`,
             },
-          }
+          };
         }
 
         // Type BlogPosting: for all pages that are blog posts
@@ -109,7 +109,7 @@ const SEO = ({
                 width: 600,
               },
             },
-          }
+          };
         }
 
         // Type Breadcrumbs: for all pages (blog post or not)
@@ -123,7 +123,7 @@ const SEO = ({
             },
             position: 1,
           },
-        ]
+        ];
 
         // include blog post page if this is a blog post
         if (isArticle) {
@@ -134,7 +134,7 @@ const SEO = ({
               name: "Blog",
             },
             position: 2,
-          })
+          });
           itemListElement.push({
             "@type": "ListItem",
             item: {
@@ -142,7 +142,7 @@ const SEO = ({
               name: seo.title,
             },
             position: 3,
-          })
+          });
         }
 
         schemaOrgBreadcrumbList = {
@@ -151,7 +151,7 @@ const SEO = ({
           description: "Breadcrumbs list",
           name: "Breadcrumbs",
           itemListElement,
-        }
+        };
 
         return (
           <Helmet
@@ -193,13 +193,13 @@ const SEO = ({
               {JSON.stringify(schemaOrgBreadcrumbList)}
             </script>
           </Helmet>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
 
 const query = graphql`
   query SEO {
@@ -219,4 +219,4 @@ const query = graphql`
       }
     }
   }
-`
+`;

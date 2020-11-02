@@ -1,16 +1,16 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import BlogList from "../components/blog-list"
-import PrevNext from "../components/prev-next"
+import Layout from "../components/layout";
+import BlogList from "../components/blog-list";
+import PrevNext from "../components/prev-next";
 
-import styles from "./blog-list-template.module.scss"
+import styles from "./blog-list-template.module.scss";
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "post" } } published: { eq: true } }
+      filter: { frontmatter: { type: { eq: "post" } }, published: { eq: true } }
       limit: $limit
       skip: $skip
       sort: { fields: frontmatter___date, order: DESC }
@@ -40,29 +40,29 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const BlogListTemplate = ({ data, pageContext }) => {
-  const { currentPage, numPages } = pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+  const { currentPage, numPages } = pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
   const prevPage =
-    currentPage - 1 === 1 ? "/blog" : "/blog/" + (currentPage - 1).toString()
-  const nextPage = "/blog/" + (currentPage + 1).toString()
+    currentPage - 1 === 1 ? "/blog" : "/blog/" + (currentPage - 1).toString();
+  const nextPage = "/blog/" + (currentPage + 1).toString();
 
   const prevDetails = isFirst
     ? null
     : {
         linkPath: prevPage,
         linkText: "Previous Page",
-      }
+      };
 
   const nextDetails = isLast
     ? null
     : {
         linkPath: nextPage,
         linkText: "Next Page",
-      }
+      };
 
   return (
     <Layout title={`Blog - Page ${currentPage}`} pathName="/blog">
@@ -72,7 +72,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
       <BlogList data={data.allMarkdownRemark} />
       <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogListTemplate
+export default BlogListTemplate;

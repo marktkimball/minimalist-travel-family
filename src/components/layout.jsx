@@ -1,18 +1,36 @@
-import React from "react"
+import React from "react";
 
-import SEO from "./seo"
-import Header from "./header"
-import Footer from "./footer"
+import SEO from "./seo";
+import Header from "./header";
+import Footer from "./footer";
 
-import "../styles/main.scss"
-import styles from "./layout.module.scss"
+import "../styles/main.scss";
+import styles from "./layout.module.scss";
 
 const Layout = props => {
-  const { children, layoutFullWidth, isArticle, title, description, image, author, pathName, datePublished } = props
+  const {
+    children,
+    layoutFullWidth,
+    isArticle,
+    title,
+    description,
+    image,
+    author,
+    pathName,
+    datePublished,
+  } = props;
 
   return (
     <>
-      <SEO isArticle={isArticle} title={title} description={description} image={image} author={author} pathName={pathName} datePublished={datePublished}/>
+      <SEO
+        isArticle={isArticle}
+        title={title}
+        description={description}
+        image={image}
+        author={author}
+        pathName={pathName}
+        datePublished={datePublished}
+      />
       <Header />
       {layoutFullWidth ? (
         <section className={styles.layout}>{children}</section>
@@ -21,7 +39,7 @@ const Layout = props => {
       )}
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

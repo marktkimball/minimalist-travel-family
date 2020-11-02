@@ -1,21 +1,26 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
-import Layout from "../../components/layout"
+import Layout from "../../components/layout";
 
-import styles from "./authors.module.scss"
+import styles from "./authors.module.scss";
 
 const Authors = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } published: { eq: true } }) {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: { type: { eq: "post" } }
+          published: { eq: true }
+        }
+      ) {
         group(field: frontmatter___author) {
           fieldValue
           totalCount
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout title="All Blog Authors" pathName="/blog/authors">
@@ -34,7 +39,7 @@ const Authors = () => {
         ))}
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default Authors
+export default Authors;

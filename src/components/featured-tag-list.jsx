@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import FeaturedTagItem from "../components/featured-tag-item"
+import FeaturedTagItem from "../components/featured-tag-item";
 
-import styles from "./featured-tag-list.module.scss"
+import styles from "./featured-tag-list.module.scss";
 
 const FeaturedTagList = ({ tags }) => {
   return (
@@ -20,7 +20,7 @@ const FeaturedTagList = ({ tags }) => {
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default FeaturedTagList
+export default FeaturedTagList;

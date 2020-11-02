@@ -5,9 +5,9 @@ title: Costa Brava, Spain
 author: Savannah
 date: 2019-05-23
 tags:
-- travel
-- europe
-- spain
+  - travel
+  - europe
+  - spain
 excerpt: Cras ac nisi aliquam, gravida metus a, tristique nisl. Etiam sit amet justo lacinia, finibus mi vel, lobortis arcu. Proin ut tellus pulvinar, tincidunt metus sed, molestie magna.
 image: "../../images/michael-cadieux-XJ-tf6E9Zdo-unsplash.jpg"
 imageAlt: alt text here
@@ -21,7 +21,7 @@ Cras ac nisi aliquam, gravida metus a, tristique nisl. Etiam sit amet justo laci
 >
 > <cite>Jaime Doe</cite>
 
- Aliquam in est auctor, imperdiet diam a, commodo justo. Pellentesque tincidunt metus feugiat mattis dictum. Phasellus hendrerit lacus sit amet tincidunt finibus.
+Aliquam in est auctor, imperdiet diam a, commodo justo. Pellentesque tincidunt metus feugiat mattis dictum. Phasellus hendrerit lacus sit amet tincidunt finibus.
 
 ![alt text here](../../images/unknown-photographer-DgE-BlRLKUU-unsplash.jpg)
 

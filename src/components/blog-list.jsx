@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import BlogListItem from "./blog-list-item"
+import BlogListItem from "./blog-list-item";
 
-import styles from "./blog-list.module.scss"
+import styles from "./blog-list.module.scss";
 
 const BlogList = ({ data }) => {
   return (
@@ -11,7 +11,7 @@ const BlogList = ({ data }) => {
         <BlogListItem key={node.id} node={node} />
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default BlogList
+export default BlogList;

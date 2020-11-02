@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import BlogList from "../components/blog-list"
-import PrevNext from "../components/prev-next"
-import Button from "../components/button"
+import Layout from "../components/layout";
+import BlogList from "../components/blog-list";
+import PrevNext from "../components/prev-next";
+import Button from "../components/button";
 
 export const query = graphql`
   query($author: String!, $skip: Int!, $limit: Int!) {
@@ -43,31 +43,31 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const Authors = ({ data, pageContext }) => {
-  const { author, currentPage, numPages } = pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+  const { author, currentPage, numPages } = pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
   const prevPage =
     currentPage - 1 === 1
       ? `/blog/authors/${author}`
-      : `/blog/authors/${author}/` + (currentPage - 1).toString()
-  const nextPage = `/blog/authors/${author}/` + (currentPage + 1).toString()
+      : `/blog/authors/${author}/` + (currentPage - 1).toString();
+  const nextPage = `/blog/authors/${author}/` + (currentPage + 1).toString();
 
   const prevDetails = isFirst
     ? null
     : {
         linkPath: prevPage,
         linkText: "Previous Page",
-      }
+      };
 
   const nextDetails = isLast
     ? null
     : {
         linkPath: nextPage,
         linkText: "Next Page",
-      }
+      };
 
   return (
     <Layout
@@ -83,7 +83,7 @@ const Authors = ({ data, pageContext }) => {
       <BlogList data={data.allMarkdownRemark} />
       <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
     </Layout>
-  )
-}
+  );
+};
 
-export default Authors
+export default Authors;

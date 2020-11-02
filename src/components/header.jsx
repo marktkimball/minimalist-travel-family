@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import { FaInstagram, FaTwitter } from "react-icons/fa"
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { FaInstagram } from "react-icons/fa";
 
-import styles from "./header.module.scss"
+import styles from "./header.module.scss";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -11,12 +11,11 @@ const Header = () => {
         siteMetadata {
           social {
             instagram
-            twitter
           }
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className={styles.headerWrapper}>
@@ -57,21 +56,13 @@ const Header = () => {
               rel="noopener noreferrer"
               className="ml3 ml4-l"
             >
-              <FaInstagram className="icon" alt="instagram icon link"/>
-            </a>
-            <a
-              href={`https://www.twitter.com/${data.siteMetadata.siteMetadata.social.twitter}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml3 ml4-l"
-            >
-              <FaTwitter className="icon" alt="twitter icon link"/>
+              <FaInstagram className="icon" alt="instagram icon link" />
             </a>
           </div>
         </nav>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

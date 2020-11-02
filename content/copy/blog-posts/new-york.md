@@ -5,9 +5,9 @@ title: New York, USA
 author: Jasmine
 date: 2019-01-03
 tags:
-- travel
-- americas
-- architecture
+  - travel
+  - americas
+  - architecture
 excerpt: Etiam in pharetra eros. Fusce vitae aliquam elit. Cras quis volutpat dui. Suspendisse potenti. Vestibulum et sapien et augue egestas congue id vel turpis. In consectetur eleifend egestas. Proin in nisi nulla. Cras non eleifend ligula, vitae lobortis elit. Maecenas ultrices pretium aliquam. Integer vitae pellentesque sem.
 image: "../../images/jonathan-riley-VW8MUbHyxCU-unsplash.jpg"
 imageAlt: alt text here

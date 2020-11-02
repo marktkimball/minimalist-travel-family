@@ -1,21 +1,26 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
-import Layout from "../../components/layout"
+import Layout from "../../components/layout";
 
-import styles from "./tags.module.scss"
+import styles from "./tags.module.scss";
 
 const Tags = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } published: { eq: true } }) {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: { type: { eq: "post" } }
+          published: { eq: true }
+        }
+      ) {
         group(field: frontmatter___tags) {
           fieldValue
           totalCount
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout title="All Blog Tags" pathName="/blog/tags">
@@ -34,7 +39,7 @@ const Tags = () => {
         ))}
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default Tags
+export default Tags;

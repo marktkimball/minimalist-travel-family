@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
 
-import styles from "./blog-list-item.module.scss"
+import styles from "./blog-list-item.module.scss";
 
 const BlogListItem = ({ node }) => {
   return (
@@ -30,7 +30,7 @@ const BlogListItem = ({ node }) => {
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default BlogListItem
+export default BlogListItem;

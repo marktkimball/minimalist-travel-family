@@ -5,9 +5,9 @@ title: San Juan, Puerto Rico
 author: Savannah
 date: 2019-07-02
 tags:
-- travel
-- americas
-- puerto-rico
+  - travel
+  - americas
+  - puerto-rico
 excerpt: Suspendisse potenti. Aliquam et urna bibendum, ornare lacus in, viverra lorem. Morbi consequat aliquet sapien in placerat. Nunc dolor dui, facilisis elementum blandit sit amet, ultrices eu enim. Vivamus at vehicula enim. Nunc lobortis lacus et tortor faucibus, ut semper est commodo.
 image: "../../images/stephanie-klepacki-zJTabFXL2nI-unsplash.jpg"
 imageAlt: alt text here

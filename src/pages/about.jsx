@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import AboutContent from "../components/about-content"
+import Layout from "../components/layout";
+import AboutContent from "../components/about-content";
 
-import styles from "./about.module.scss"
+import styles from "./about.module.scss";
 
 const AboutPage = ({ data }) => {
   return (
@@ -18,20 +18,6 @@ const AboutPage = ({ data }) => {
         imageAlt={data.aboutSectionOne.frontmatter.imageAlt}
       />
 
-      <AboutContent
-        heading={data.aboutSectionTwo.frontmatter.heading}
-        copy={data.aboutSectionTwo.html}
-        image={data.aboutSectionTwo.frontmatter.image.childImageSharp.fluid}
-        imageAlt={data.aboutSectionTwo.frontmatter.imageAlt}
-      />
-
-      <AboutContent
-        heading={data.aboutSectionThree.frontmatter.heading}
-        copy={data.aboutSectionThree.html}
-        image={data.aboutSectionThree.frontmatter.image.childImageSharp.fluid}
-        imageAlt={data.aboutSectionThree.frontmatter.imageAlt}
-      />
-
       <section className={styles.finalSectionWrapper}>
         <div>
           <h2 className="section-heading">Thanks for stopping by!</h2>
@@ -43,53 +29,13 @@ const AboutPage = ({ data }) => {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
     aboutSectionOne: markdownRemark(
-      frontmatter: {
-        type: { eq: "page-content" }
-        name: { eq: "about-1" }
-      }
-    ) {
-      frontmatter {
-        heading
-        image {
-          childImageSharp {
-            fluid(maxWidth: 900, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-          publicURL
-        }
-        imageAlt
-      }
-      html
-    }
-    aboutSectionTwo: markdownRemark(
-      frontmatter: { type: { eq: "page-content" }, name: { eq: "about-2" } }
-    ) {
-      frontmatter {
-        heading
-        image {
-          childImageSharp {
-            fluid(maxWidth: 900, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-          publicURL
-        }
-        imageAlt
-      }
-      html
-    }
-    aboutSectionThree: markdownRemark(
-      frontmatter: {
-        type: { eq: "page-content" }
-        name: { eq: "about-3" }
-      }
+      frontmatter: { type: { eq: "page-content" }, name: { eq: "about-1" } }
     ) {
       frontmatter {
         heading
@@ -106,14 +52,11 @@ export const query = graphql`
       html
     }
     aboutSectionFinal: markdownRemark(
-      frontmatter: {
-        type: { eq: "page-content" }
-        name: { eq: "about-final" }
-      }
+      frontmatter: { type: { eq: "page-content" }, name: { eq: "about-final" } }
     ) {
       html
     }
   }
-`
+`;
 
-export default AboutPage
+export default AboutPage;

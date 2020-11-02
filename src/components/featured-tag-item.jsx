@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
 
-import styles from "./featured-tag-item.module.scss"
+import styles from "./featured-tag-item.module.scss";
 
 const FeaturedTagItem = ({ tag, heading, image, imageAlt }) => {
   return (
@@ -12,7 +12,7 @@ const FeaturedTagItem = ({ tag, heading, image, imageAlt }) => {
         <Img fluid={image} alt={imageAlt} />
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default FeaturedTagItem
+export default FeaturedTagItem;

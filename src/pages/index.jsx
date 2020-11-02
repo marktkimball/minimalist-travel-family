@@ -1,21 +1,21 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import Button from "../components/button"
-import BlogList from "../components/blog-list"
-import FeaturedTagList from "../components/featured-tag-list"
-import EmailSignup from "../components/email-signup"
-import AboutContent from "../components/about-content"
+import Layout from "../components/layout";
+import Button from "../components/button";
+import BlogList from "../components/blog-list";
+import FeaturedTagList from "../components/featured-tag-list";
+import EmailSignup from "../components/email-signup";
+import AboutContent from "../components/about-content";
 
-import styles from "./index.module.scss"
+import styles from "./index.module.scss";
 
 const IndexPage = ({ data }) => {
   // Create sublist of featured tags where feature flag is set and a valid image is present
   let featuredTags = data.tagDetails.frontmatter.tag_details.filter(obj => {
-    return obj.featured === true && obj.featured_image
-  })
+    return obj.featured === true && obj.featured_image;
+  });
 
   return (
     <Layout layoutFullWidth title="Home">
@@ -95,16 +95,13 @@ const IndexPage = ({ data }) => {
         />
       </section>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
     latestPosts: allMarkdownRemark(
-      filter: {
-        frontmatter: { type: { eq: "post" } }
-        published: { eq: true }
-      }
+      filter: { frontmatter: { type: { eq: "post" } }, published: { eq: true } }
       limit: 3
       sort: { fields: frontmatter___date, order: DESC }
     ) {
@@ -213,6 +210,6 @@ export const query = graphql`
       html
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

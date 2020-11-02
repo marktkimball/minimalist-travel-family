@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import { FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa"
+import { FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
 
 const SocialShare = ({ text, shareTitle, shareUrl }) => {
   const data = useStaticQuery(graphql`
@@ -14,7 +14,7 @@ const SocialShare = ({ text, shareTitle, shareUrl }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className="mv3">
@@ -41,7 +41,7 @@ const SocialShare = ({ text, shareTitle, shareUrl }) => {
         <FaPinterest className="icon-large ml3" />
       </a>
     </div>
-  )
-}
+  );
+};
 
-export default SocialShare
+export default SocialShare;

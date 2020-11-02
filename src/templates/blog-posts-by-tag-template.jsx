@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import BlogList from "../components/blog-list"
-import PrevNext from "../components/prev-next"
-import Button from "../components/button"
+import Layout from "../components/layout";
+import BlogList from "../components/blog-list";
+import PrevNext from "../components/prev-next";
+import Button from "../components/button";
 
 export const query = graphql`
   query($tag: String!, $skip: Int!, $limit: Int!) {
@@ -54,36 +54,36 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const Tags = ({ data, pageContext }) => {
-  const { tag, currentPage, numPages } = pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+  const { tag, currentPage, numPages } = pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
   const prevPage =
     currentPage - 1 === 1
       ? `/blog/tags/${tag}`
-      : `/blog/tags/${tag}/` + (currentPage - 1).toString()
-  const nextPage = `/blog/tags/${tag}/` + (currentPage + 1).toString()
+      : `/blog/tags/${tag}/` + (currentPage - 1).toString();
+  const nextPage = `/blog/tags/${tag}/` + (currentPage + 1).toString();
 
   const prevDetails = isFirst
     ? null
     : {
         linkPath: prevPage,
         linkText: "Previous Page",
-      }
+      };
 
   const nextDetails = isLast
     ? null
     : {
         linkPath: nextPage,
         linkText: "Next Page",
-      }
+      };
 
   let tagDetails = data.tagDetails.frontmatter.tag_details.filter(obj => {
-    return obj.name === tag
-  })
-  tagDetails = tagDetails.length > 0 ? tagDetails[0] : null
+    return obj.name === tag;
+  });
+  tagDetails = tagDetails.length > 0 ? tagDetails[0] : null;
 
   return (
     <Layout
@@ -107,7 +107,7 @@ const Tags = ({ data, pageContext }) => {
       <BlogList data={data.posts} />
       <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
     </Layout>
-  )
-}
+  );
+};
 
-export default Tags
+export default Tags;

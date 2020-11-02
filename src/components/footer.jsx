@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { FaInstagram } from "react-icons/fa";
 
-import styles from "./footer.module.scss"
+import styles from "./footer.module.scss";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -11,31 +11,19 @@ const Footer = () => {
         siteMetadata {
           social {
             instagram
-            twitter
           }
           mailchimpUrl
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className={styles.footerWrapper}>
       <footer className={styles.footer}>
         <div className={styles.footerColumnName}>
           <span className={styles.name}>Voyager</span>
-          <p className="f5">
-            Gatsby Starter Voyager is MIT Licensed.
-          </p>
-          <div>
-            <a
-              href="https://github.com/gregdferrell/gatsby-starter-voyager"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="icon" alt="github icon link" />
-            </a>
-          </div>
+          <p className="f5">Traveling light across the world.</p>
         </div>
         <div className={styles.footerColumnLinks}>
           <Link to="/" className={styles.navItem}>
@@ -74,17 +62,10 @@ const Footer = () => {
           >
             <FaInstagram className="icon" alt="instagram icon link" />
           </a>
-          <a
-            href={`https://www.twitter.com/${data.site.siteMetadata.social.twitter}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter className="icon" alt="twitter icon link" />
-          </a>
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

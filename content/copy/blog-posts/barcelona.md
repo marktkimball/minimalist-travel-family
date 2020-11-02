@@ -5,9 +5,9 @@ title: Barcelona, Spain
 author: Maya
 date: 2019-08-25
 tags:
-- travel
-- europe
-- spain
+  - travel
+  - europe
+  - spain
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus sagittis cursus. Etiam pulvinar eget est id maximus. Aenean non metus et ipsum sagittis fringilla. Suspendisse id urna fermentum, sagittis erat ac, ultricies ligula.
 image: "../../images/biel-morro-d0xjEv-WJQk-unsplash.jpg"
 imageAlt: alt text here

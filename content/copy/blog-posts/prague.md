@@ -5,9 +5,9 @@ title: Prague, Czech Republic
 author: Maya
 date: 2019-03-02
 tags:
-- travel
-- europe
-- architecture
+  - travel
+  - europe
+  - architecture
 excerpt: Aenean elementum ipsum arcu, a faucibus libero consectetur a. Sed vulputate lacus id nulla tempus, vitae eleifend eros bibendum. Nam eget euismod lorem.
 image: "../../images/flavio-gasperini-kOUMfN5mv10-unsplash.jpg"
 imageAlt: alt text here

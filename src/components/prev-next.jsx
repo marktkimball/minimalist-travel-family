@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa"
+import React from "react";
+import { Link } from "gatsby";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
-import styles from "./prev-next.module.scss"
+import styles from "./prev-next.module.scss";
 
 const PrevNext = ({ prevDetails, nextDetails }) => {
   return (
@@ -34,7 +34,7 @@ const PrevNext = ({ prevDetails, nextDetails }) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PrevNext
+export default PrevNext;
