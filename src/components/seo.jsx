@@ -192,6 +192,7 @@ const SEO = ({
             <script type="application/ld+json">
               {JSON.stringify(schemaOrgBreadcrumbList)}
             </script>
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           </Helmet>
         );
       }}
