@@ -16,7 +16,7 @@ const EmailSignup = () => {
 
   return (
     <div className={styles.signupSection}>
-      <h2 className="section-heading">Subscribe to this blog!</h2>
+      <h2 className="section-heading">Subscribe to the blog!</h2>
       <form
         className={styles.form}
         action={data.site.siteMetadata.mailchimpUrl}
@@ -25,25 +25,33 @@ const EmailSignup = () => {
         target="_blank"
         noValidate
       >
-        <fieldset className={styles.formFieldset}>
-          <div className="cf">
-            <label className="clip" htmlFor="email-address">
-              Email Address
-            </label>
-            <input
-              className={styles.formInputEmail}
-              placeholder="Your Email Address"
-              type="text"
-              name="EMAIL"
-              id="email-address"
-            />
-            <input
-              className={styles.formSubmit}
-              type="submit"
-              name="subscribe"
-              value="Subscribe"
-            />
-          </div>
+        <fieldset>
+          <label className="clip" htmlFor="first-name">
+            First Name
+          </label>
+          <input
+            className={styles.formInputField}
+            placeholder="First Name"
+            type="text"
+            name="FIRST NAME"
+            id="first-name"
+          />
+          <label className="clip" htmlFor="email-address">
+            Email Address
+          </label>
+          <input
+            className={styles.formInputField}
+            placeholder="Email Address"
+            type="text"
+            name="EMAIL"
+            id="email-address"
+          />
+          <input
+            className={styles.formSubmit}
+            type="submit"
+            name="subscribe"
+            value="Sign Up"
+          />
         </fieldset>
       </form>
     </div>

@@ -2,7 +2,7 @@
 type: page-content
 name: about-1
 heading: "Olivia"
-image: "../../images/eduardo-dutra-AHIp7107h7k-unsplash.jpg"
+image: "../../images/olivia-about-me.jpg"
 imageAlt: "alt text here"
 ---
 

@@ -23,7 +23,7 @@ const Header = () => {
         <nav className={styles.navMain}>
           <span>
             <Link to="/" className={styles.navHomeLink}>
-              Voyager
+              Minimalist Travel Family
             </Link>
           </span>
 

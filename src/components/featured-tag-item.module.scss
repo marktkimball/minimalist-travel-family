@@ -1,18 +1,26 @@
 @import "../styles/main.scss";
 
-.featured-tag-item {
-  @extend .center, .mt3, .ph3, .w-100;
-  @extend .w-50-m;
+.featured-tag-item-container {
+  @extend .center, .w-100;
+  @extend .w-40-m;
   @extend .w-25-l;
-
+  @extend .mb4;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid $color-tertiary;
   transition: all 0.3s ease-in-out;
+
+  &:hover {
+    @extend .depth-1;
+    border-color: $color-secondary;
+  }
+}
+
+.featured-tag-item {
+  @extend .h-100, .pa3;
+  @extend .bg-primary;
 
   a {
     @extend .no-underline;
-  }
-
-  &:hover {
-    @extend .bg-primary, .br4;
-    transform: scale(1.03);
   }
 }

@@ -7,7 +7,7 @@ import styles from "./button.module.scss";
 const Button = ({ linkUrl, linkText }) => {
   return (
     <div className={styles.wrapper}>
-      <Link to={linkUrl} className={styles.link}>
+      <Link to={linkUrl} className={styles.mainButton}>
         {linkText}
       </Link>
     </div>

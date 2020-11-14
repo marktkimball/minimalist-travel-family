@@ -161,8 +161,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
+        custom: {
+          families: ["Fitalia", "SimpleScript"],
+          urls: ["/fonts/fonts.css"],
+        },
         google: {
-          families: ["Open Sans", "Rock Salt", "Mansalva", "Lily Script One"],
+          families: ["Poppins"],
         },
       },
     },

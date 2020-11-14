@@ -1,10 +1,10 @@
 ---
 type: page-content
 name: index-hero
-title: Voyager
+title: Minimalist Travel Family
 subtitle: traveling light across the world
-leftImage: "../../images/luca-bravo-O453M2Liufs-unsplash.jpg"
+leftImage: "../../images/intro-beach.jpg"
 leftImageAlt: alt text here
-rightImage: "../../images/nadi-whatisdelirium-3VTZloIMFP0-unsplash.jpg"
+rightImage: "../../images/intro-map.jpg"
 rightImageAlt: alt text here
 ---

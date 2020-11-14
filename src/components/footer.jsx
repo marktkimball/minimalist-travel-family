@@ -22,7 +22,7 @@ const Footer = () => {
     <div className={styles.footerWrapper}>
       <footer className={styles.footer}>
         <div className={styles.footerColumnName}>
-          <span className={styles.name}>Voyager</span>
+          <span className={styles.name}>Minimalist Travel Family</span>
           <p className="f5">Traveling light across the world.</p>
         </div>
         <div className={styles.footerColumnLinks}>

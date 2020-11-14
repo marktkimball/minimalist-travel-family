@@ -2,6 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import LogoImage from "../../static/images/mtf-logo.png";
+
 import Layout from "../components/layout";
 import Button from "../components/button";
 import BlogList from "../components/blog-list";
@@ -31,9 +33,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
         <div className={styles.heroColumnSecond}>
-          <h1 className={styles.heroTitle}>
-            {data.heroSectionMarkdown.frontmatter.title}
-          </h1>
+          <img className={styles.heroTitle} src={LogoImage} alt="logo" />
           <p className={styles.heroSubtitle}>
             {data.heroSectionMarkdown.frontmatter.subtitle}
           </p>

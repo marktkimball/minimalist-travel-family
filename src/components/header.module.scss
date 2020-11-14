@@ -36,14 +36,14 @@
 .nav-home-link {
   @extend .text-color-secondary;
 
-  @extend .bb, .db, .f3, .mb2, .no-underline, .pb2, .tc, .ttu, .v-mid;
+  @extend .bb, .db, .f3, .mb2, .no-underline, .pb2, .tc, .v-mid;
   @extend .bb-0-l, .dtc-l, .pb0-l, .tl-l;
 
   &:hover {
     @extend .text-color-secondary;
   }
 
-  font-family: "Rock Salt", cursive;
+  font-family: "SimpleScript", cursive;
 }
 
 .nav-item-list {

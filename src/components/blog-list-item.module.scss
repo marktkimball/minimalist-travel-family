@@ -4,12 +4,13 @@
   @extend .bg-very-light-gray;
   @extend .br3, .dark-gray, .flex, .flex-column, .items-center, .mv3, .pa4;
   @extend .flex-row-l;
+  @extend .depth-1;
+
+  transition: all 300ms ease-in-out;
 }
 
 .post:hover {
   @extend .text-color-secondary;
-
-  background: $color-primary;
 }
 
 .post-column {
@@ -20,7 +21,7 @@
 .title {
   @extend .f2, .fw1, .lh-copy, .ma0;
 
-  font-family: "Mansalva", cursive;
+  font-family: "Fitalia", cursive;
 }
 
 .subtitle {
