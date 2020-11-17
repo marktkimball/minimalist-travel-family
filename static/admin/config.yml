@@ -35,8 +35,8 @@ collections:
         file: "content/data/tags.md"
         fields:
           - {
-              label: "tag_details",
-              name: "Tag Details",
+              label: "Tag Details",
+              name: "tag_details",
               widget: "list",
               allow_add: true,
               fields:
