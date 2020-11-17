@@ -27,3 +27,126 @@ collections:
       - { label: "Image Alt", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Type", name: "type", widget: "hidden", default: "post" }
+  - name: "tags"
+    label: "Tags"
+    file: "content/copy/data/tags.md"
+    fields:
+      - {
+          label: "tag_details",
+          name: "Tag Details",
+          widget: "list",
+          fields:
+            [
+              { label: Name, name: name, widget: string },
+              { label: Description, name: description, widget: string },
+              { label: Is Featured, name: featured, widget: boolean },
+              { label: Featured Image, name: featured_image, widget: image },
+              {
+                label: Featured Image Alt,
+                name: featured_image_alt,
+                widget: string,
+              },
+            ],
+        }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/copy/pages/_about-1.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {
+              label: "Name",
+              name: "name",
+              widget: "hidden",
+              default: "about-1",
+            }
+          - {
+              label: "Type",
+              name: "type",
+              widget: "hidden",
+              default: "page-content",
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Image Alt, name: imageAlt, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - file: "content/copy/pages/_about-final.md"
+        label: "About Page Final Blurb"
+        name: "about-final"
+        fields:
+          - {
+              label: "Name",
+              name: "name",
+              widget: "hidden",
+              default: "about-final",
+            }
+          - {
+              label: "Type",
+              name: "type",
+              widget: "hidden",
+              default: "page-content",
+            }
+          - { label: Body, name: body, widget: markdown }
+      - file: "content/copy/pages/_index-about.md"
+        label: "Index Page About Section"
+        name: "index-about"
+        fields:
+          - {
+              label: "Name",
+              name: "name",
+              widget: "hidden",
+              default: "index-about",
+            }
+          - {
+              label: "Type",
+              name: "type",
+              widget: "hidden",
+              default: "page-content",
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Image Alt, name: imageAlt, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - file: "content/copy/pages/_index-hero.md"
+        label: "Index Page Hero Section"
+        name: "index-hero"
+        fields:
+          - {
+              label: "Name",
+              name: "name",
+              widget: "hidden",
+              default: "index-hero",
+            }
+          - {
+              label: "Type",
+              name: "type",
+              widget: "hidden",
+              default: "page-content",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Left Image, name: leftImage, widget: image }
+          - { label: Left Image Alt, name: leftImageAlt, widget: string }
+          - { label: Right Image, name: rightImage, widget: image }
+          - { label: Right Image Alt, name: rightImageAlt, widget: string }
+      - file: "content/copy/pages/_index-main-feature.md"
+        label: "Index Page Feature Section"
+        name: "index-main-feature"
+        fields:
+          - {
+              label: "Name",
+              name: "name",
+              widget: "hidden",
+              default: "index-main-feature",
+            }
+          - {
+              label: "Type",
+              name: "type",
+              widget: "hidden",
+              default: "page-content",
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Link URL, name: linkUrl, widget: string }
+          - { label: Link Text, name: linkText, widget: string }
+          - { label: Body, name: body, widget: markdown }
