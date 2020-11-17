@@ -32,12 +32,13 @@ collections:
     files:
       - name: "tags"
         label: "Tags"
-        file: "content/copy/data/tags.md"
+        file: "content/data/tags.md"
         fields:
           - {
               label: "tag_details",
               name: "Tag Details",
               widget: "list",
+              allow_add: true,
               fields:
                 [
                   { label: Name, name: name, widget: string },
