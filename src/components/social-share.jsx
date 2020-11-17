@@ -1,26 +1,13 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 
 import { FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
 
 const SocialShare = ({ text, shareTitle, shareUrl }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <div className="mv3">
       <span className="f6 gray">{text}</span>
       <a
-        href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}&via=${data.site.siteMetadata.social.twitter}`}
+        href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`}
         target="_blank"
         rel="noopener noreferrer"
       >

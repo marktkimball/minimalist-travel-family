@@ -13,13 +13,12 @@ module.exports = {
     description:
       "Follow the adventures of our minimalist family as we travel the world and explore new places.",
     image: "/images/logo.jpg",
-    bannerImage: "/images/banner.png",
+    bannerImage: "/images/banner.jpg",
     blogPostsPerPage: 5,
     social: {
       instagram: "",
-      twitter: "",
     },
-    mailchimpUrl: "",
+    mailchimpUrl: "http://eepurl.com/hi7W1D",
   },
   plugins: [
     {

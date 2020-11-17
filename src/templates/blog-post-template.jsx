@@ -42,9 +42,6 @@ export const queryPostBySlug = graphql`
     site: site {
       siteMetadata {
         siteUrl
-        social {
-          twitter
-        }
       }
     }
   }
