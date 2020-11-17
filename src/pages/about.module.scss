@@ -5,6 +5,7 @@
 
   @extend .mb5, .pa5;
   @extend .mb6-l;
+  @extend .br1, .depth-1;
 
   p {
     @extend .center, .measure, .tc;

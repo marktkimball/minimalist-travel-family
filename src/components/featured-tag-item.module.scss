@@ -1,10 +1,14 @@
 @import "../styles/main.scss";
 
-.featured-tag-item-container {
+.featured-tag-item-link {
   @extend .center, .w-100;
   @extend .w-40-m;
   @extend .w-25-l;
   @extend .mb4;
+  @extend .no-underline;
+}
+
+.featured-tag-item-container {
   padding: 8px;
   background-color: #fff;
   border: 1px solid $color-tertiary;
@@ -19,8 +23,4 @@
 .featured-tag-item {
   @extend .h-100, .pa3;
   @extend .bg-primary;
-
-  a {
-    @extend .no-underline;
-  }
 }

@@ -6,14 +6,14 @@ import styles from "./featured-tag-item.module.scss";
 
 const FeaturedTagItem = ({ tag, heading, image, imageAlt }) => {
   return (
-    <div className={styles.featuredTagItemContainer}>
-      <div className={styles.featuredTagItem}>
-        <Link to={`/blog/tags/${tag}`}>
+    <Link className={styles.featuredTagItemLink} to={`/blog/tags/${tag}`}>
+      <div className={styles.featuredTagItemContainer}>
+        <div className={styles.featuredTagItem}>
           <Img fluid={image} alt={imageAlt} />
           <h3 className="section-sub-heading">{heading}</h3>
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

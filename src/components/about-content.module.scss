@@ -3,8 +3,9 @@
 .section-wrapper {
   @extend .bg-primary;
 
-  @extend .center, .flex, .flex-column, .items-center, .mb5;
+  @extend .br1, .center, .flex, .flex-column, .items-center, .mb5;
   @extend .flex-row-l, .mb6-l;
+  @extend .depth-1;
 }
 
 .copy-wrapper {

@@ -3,4 +3,4 @@ type: page-content
 name: about-final
 ---
 
-Gatsby Starter Voyager is feature-rich starter blog. It's MIT licensed and ready to be used as-is or as a starting point from which to build something tailored to your needs. Use it, learn from it, build on it & enjoy.
+Thank you so much for visiting my blog! I hope you enjoyed what you read and will come back for more in the future! Let me know what you think, I'd love to hear from you.

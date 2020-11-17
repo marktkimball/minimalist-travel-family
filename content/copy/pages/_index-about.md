@@ -2,8 +2,8 @@
 type: page-content
 name: index-about
 heading: "About"
-image: "../../images/guille-pozzi-jD34AmVhESc-unsplash.jpg"
-imageAlt: "alt text here"
+image: "../../images/sunset_crater.jpg"
+imageAlt: "Me at Sunset Crater"
 ---
 
 Write a short blurb about your site here and link to your About page for more information.
