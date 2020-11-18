@@ -1,11 +1,8 @@
 ---
-type: page-content
 name: index-about
-heading: "About"
-image: "../../images/sunset_crater.jpg"
-imageAlt: "Me at Sunset Crater"
+type: page-content
+heading: About
+image: ../../images/sunset_crater.jpg
+imageAlt: Me at Sunset Crater
 ---
-
-Write a short blurb about your site here and link to your About page for more information.
-
-Suspendisse id urna fermentum, sagittis erat ac, ultricies ligula. Quisque porta lacus finibus, semper ex id, malesuada odio. Cras ac nisi aliquam, gravida metus a, tristique nisl. Etiam sit amet justo lacinia, finibus mi vel, lobortis arcu.
+Have you ever wanted to just sell everything and start over?  That’s exactly what I did with my family of 6!  On this blog, I share all my tips, tricks and adventures that come with being a minimalist family who gets to travel full time!!
